@@ -1,6 +1,6 @@
 {
-    "short_name": "プッシュ通知購読アプリ",
-    "name": "プッシュ通知購読アプリ",
-    "start_url": "notification.html",
+    "short_name": "りーぎゃる",
+    "name": "りーぎゃる",
+    "start_url": "index.html",
     "gcm_sender_id": "261285297076"
   }

@@ -18,6 +18,8 @@ firebase.analytics();
 const messaging = firebase.messaging();
 messaging.usePublicVapidKey("BDiTZeP9vUvyi7wn2XduOZ2oXRfs-ztUEzR8HPn04BxAvq_qY_l7NzsLn76VtGSNXED_0NsVKkBLZnpIDDD0JpM");
 
+console.log("messagingオブジェクトの中身");
+console.log(messaging);
 
 // Firestore使用準備
 var db = firebase.firestore();
@@ -79,7 +81,6 @@ function checkSubscription() {
 // 購読処理
 function getSubscription() {
     //通知の承認を確認
-    alert();
     messaging.requestPermission().then(function () {
         //トークンを確認
         messaging.getToken().then(function (token) {

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プッシュ通知の購読</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <!-- <script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script> -->
+  <script defer src="js/firebase.js"></script>
+</head>
+
+<body>
+
+  <div id="notification">
+    <h3>NOTIFICATION</h3>
+    <p>当サイトの更新をプッシュ通知で受け取ることができます。</p>
+    <p class="notice"></p>
+    <button id="EntryButton" onclick="getSubscription()">プッシュ通知を受け取る</button>
+    <button id="RemoveButton" onclick="removeSubscription()">プッシュ通知を解除する</button>
+  </div>
+</body>
+
+</html>

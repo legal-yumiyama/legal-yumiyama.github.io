@@ -1,0 +1,38 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- アドレスバー等のブラウザのUIを非表示 -->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <!-- ホーム画面に表示されるアプリ名 -->
+      <meta name="apple-mobile-web-app-title" content="TAP10">
+      <!-- ホーム画面に表示されるアプリアイコン -->
+      <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+      <title>TAP10</title>
+      <link rel="stylesheet" type="text/css" href="css/app.css">
+      <link rel="manifest" href="./manifest.json">
+      <!-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css"> -->
+      <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"></script>
+    </head>
+
+    <body onload="openCamera();">
+        <video autoplay playsinline></video>
+    </body>
+
+    <script src="js/camera.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('services/camera-sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
+</html>

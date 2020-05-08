@@ -74,8 +74,19 @@
     <button id="RemoveButton" class="btn" onclick="removeSubscription()">プッシュ通知を解除する</button>
     
     <br/>
-    <input type="file"  class="btn" name="upfile" id="upfile" accept="image/*" capture="camera" />
-    <input type="file"  class="btn" name="upfile_2" id="upfile_2" />
+    <label>
+      <span class="btn btn-primary">
+        写真をとってアップ
+        <input type="file" style="display:none"  name="upfile" id="upfile" accept="image/*" capture="camera" />
+      </span>
+    </label>
+    <label>
+      <span class="btn btn-primary">
+        写真を選択
+        <input type="file" style="display:none"  name="upfile_2" id="upfile_2" />
+      </span>
+    </label>
+    
 
   </section>
 </body>

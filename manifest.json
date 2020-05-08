@@ -3,7 +3,7 @@
     "name": "りーぎゃる",
     "start_url": "index.html",
     "gcm_sender_id": "261285297076",
-    "display": "fullscreen",
+    "display": "standalone",
     "theme_color": "#dff0d8",
     "background_color": "#dff0d8"
   }

@@ -1,5 +1,5 @@
 const STATIC_DATA = [
-  '/index.html',
+  'index.html',
   '/css/app.css',
   '/css/chat.css'
 ];

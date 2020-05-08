@@ -19,6 +19,7 @@
 
   <title>り～ぎゃる</title>
   <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/chat.css">
   <link rel="manifest" href="./manifest.json">
   <!-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css"> -->
   <script
@@ -36,16 +37,39 @@
 <body>
 
   <section class="container">
-    <h1 class="title">10秒で何回タップできるか</h1>
-    <button id="js-tapBtn" class="btn-tap" disabled>
-      <span id="js-count"></span><br>タップ!!
-    </button>
-    <div class="time">残り時間 <span id="js-time"></span> 秒</div>
-    <button id="js-startBtn" class="btn">START</button>
-    <br/>
+    <h1 class="title">あつまれ！り～ぎゃるの森</h1>
+    <div class="chat-box">
+      <div class="chat-face">
+        <img src="images/animal_penguin.png" alt="自分のチャット画像です。" width="90" height="90">
+        <p style="margin-top: 0;">ペン太</p>
+      </div>
+
+      <div class="chat-area">
+        <div class="chat-hukidashi">
+          ペンペンペンペンペンペンペンペンペン
+        </div>
+      </div>
+    </div>
+    
+    <div class="chat-box">
+      <div class="chat-face">
+        <img src="images/animal_hamster.png" alt="誰かのチャット画像です。" width="90" height="90">
+        <p style="margin-top: 0;">ハム子</p>
+      </div>
+      <div class="chat-area">
+        <div class="chat-hukidashi someone">
+          ジジジジジジジジジジジジジジジ<br>
+          へへへ
+        </div>
+      </div>
+    </div>
+
+
     <a href="camera.html">
       <button type="button" class="btn">カメラへ</button>
     </a>
+
+
     <p class="notice"></p>
     <button id="EntryButton" class="btn" onclick="getSubscription()">プッシュ通知を受け取る</button>
     <button id="RemoveButton" class="btn" onclick="removeSubscription()">プッシュ通知を解除する</button>
@@ -55,6 +79,6 @@
 
   </section>
 </body>
-<script src="js/app.js"></script>
+<!-- <script src="js/app.js"></script> -->
 <script defer src="js/firebase.js"></script>
 </html>
